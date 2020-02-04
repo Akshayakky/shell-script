@@ -3,7 +3,6 @@
 # READ THE FILE EXTENSION AND PRINT FILE TYPE
 for fileName in $(ls)
 do
-
 #READ FILE EXTENSION
 file=${fileName##*\.}
 	case "$file" in

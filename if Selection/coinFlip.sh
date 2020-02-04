@@ -3,7 +3,7 @@
 random=$((RANDOM%2))
 if [ $random -eq 0 ]
 then 
-echo Heads
+	echo Heads
 else
-echo Tails
+	echo Tails
 fi

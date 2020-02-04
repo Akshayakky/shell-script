@@ -14,7 +14,7 @@ do
 done
 if [ $isPrime -eq 1 ]
 then 
-echo "Prime Number"
+	echo "Prime Number"
 else
-echo "NOt Prime NUmber"
+	echo "NOt Prime NUmber"
 fi
