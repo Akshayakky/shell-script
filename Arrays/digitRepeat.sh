@@ -1,4 +1,6 @@
 #!/bin/bash -x
+
+#CHECK FOR NUMBERS BETWEEN 0 AND 100 THAT HAVE SAME DIGITS
 count=0
 for (( counter=0;counter<100;counter++ ))
 do

@@ -7,6 +7,7 @@ array1[$counter]=$((100+RANDOM%900))
 done
 
 echo ${array1[@]}
+
 #SORTING THE ARRAY
 function  sort(){
 array=("$@")
@@ -29,7 +30,7 @@ echo ${array[@]}
 array=($(sort ${array1[@]}))
 echo ${array[@]}
 
-#LENGHT OF ARRAY
+#LENGTH OF ARRAY
 length=${#array1[@]}
 
 echo Second Largest Element : ${array[length-2]}

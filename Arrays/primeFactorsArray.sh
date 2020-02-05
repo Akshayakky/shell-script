@@ -12,6 +12,7 @@ do
 	#TO CHECK IF COUNTER IS A FACTOR
 	if [ $(($number%$counter)) -eq 0 ]
 	then
+		#USING PRIME FACTORIZATION
 		number=$((number/counter))
 		array[count]=$counter
 		((count++))

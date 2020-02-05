@@ -1,8 +1,9 @@
 #!/bin/bash -x
 
+#DEFINE ARRAY
 arrays=(1 -1 0 2 3 -3)
-l=1
-r=$((${#arrays[@]}-1))
+
+#FUNCTION TO SORT ARRAY
 function  sort(){
 array=("$@")
 for (( i=0;i<$((${#array[@]}-1));i++ ))
@@ -22,6 +23,8 @@ echo ${array[@]}
 
 array=($(sort ${arrays[@]}))
 echo ${array[@]}
+
+#CHECKING FOR INTEGERS THAT SUM UP TO ZERO
 for (( counter=0;counter<${#array[@]};counter++ ))
 do
 l=$(($counter+1))
