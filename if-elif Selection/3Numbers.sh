@@ -7,32 +7,32 @@ read c
 
 #OUTPUT THE RESULT OF OPERATIONS
 output=$(( a+b*c ))
-echo $output
+	echo $output
 output=$(( c+a/b ))
-echo $output
+	echo $output
 output=$(( a%b+c ))
-echo $output
+	echo $output
 output=$(( a*b+c ))
-echo output
+	echo output
 
 #CHECKING FOR MAXIMUM NUMBER AMONG a, b AND c
 if [ $a -gt $b ]
 then
-max=$a
+	max=$a
 else
-max=$b
+	max=$b
 fi
 if [ $c -gt $max ]
 then
-max=$c
+	max=$c
 fi
 
 #CHECKING FOR MINIMUM NUMBER AMONG a, b AND c
 if [ $a -lt $b ]
 then
-min=$a
+	min=$a
 else
-min=$b
+	min=$b
 fi
 echo Minimum : $min
 echo Maximum : $max
