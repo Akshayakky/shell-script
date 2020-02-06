@@ -27,20 +27,20 @@ echo ${array[@]}
 #CHECKING FOR INTEGERS THAT SUM UP TO ZERO
 for (( counter=0;counter<${#array[@]};counter++ ))
 do
-l=$(($counter+1))
-r=$((${#arrays[@]}-1))
+	l=$(($counter+1))
+	r=$((${#arrays[@]}-1))
 	while [ $l -lt $r ]
 	do
-	if [ $((${array[counter]} + ${array[l]} + ${array[r]})) -eq 0 ]
-	then 
-		echo ${array[counter]} ","  ${array[l]} ","  ${array[r]}
-		((l++));
-		((r--))
-	elif [ $((${array[counter]} + ${array[l]} + ${array[r]})) -lt 0 ]
-	then
-		((l++));
-	else
-		((r--));
-	fi
+		if [ $((${array[counter]} + ${array[l]} + ${array[r]})) -eq 0 ]
+		then 
+			echo ${array[counter]} ","  ${array[l]} ","  ${array[r]}
+			((l++));
+			((r--))
+		elif [ $((${array[counter]} + ${array[l]} + ${array[r]})) -lt 0 ]
+		then
+			((l++));
+		else
+			((r--));
+		fi
 	done
 done
