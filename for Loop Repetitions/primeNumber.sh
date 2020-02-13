@@ -6,7 +6,7 @@ IS_PRIME=1
 read -p "Enter any number : " number
 
 #FOR LOOP TO CHECK IF ANY NUMBER DIVIDES ENTERED NUMBER
-for (( counter=2;counter<=$number/2;counter++))
+for (( counter=2; counter<=$number/2; counter++))
 do
 	if [ $(($number%$counter)) -eq 0 ]
 	then
