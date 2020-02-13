@@ -6,33 +6,35 @@ read b
 read c
 
 #OUTPUT THE RESULT OF OPERATIONS
-output=$(( a+b*c ))
-	echo $output
-output=$(( c+a/b ))
-	echo $output
-output=$(( a%b+c ))
-	echo $output
-output=$(( a*b+c ))
-	echo output
+compute1=$(( a+b*c ))
+compute2=$(( c+a/b ))
+compute3=$(( a%b+c ))
+compute4=$(( a*b+c ))
 
-#CHECKING FOR MAXIMUM NUMBER AMONG a, b AND c
-if [ $a -gt $b ]
+#CHECKING FOR MAXIMUM VALUE AMONG COMPUTES
+if [ $compute1 -gt $compute2 -a $compute1 -gt $compute3 -a $compute1 -gt $compute4 ]
 then
-	max=$a
+	max=$compute1
+elif [ $compute2 -gt $compute3 -a $compute2 -gt $compute4 ]
+then
+	max=$compute2
+elif [ $compute3 -gt $compute4 ]
+then
+	max=$compute3
 else
-	max=$b
-fi
-if [ $c -gt $max ]
-then
-	max=$c
+	max=$compute4
 fi
 
-#CHECKING FOR MINIMUM NUMBER AMONG a, b AND c
-if [ $a -lt $b ]
+#CHECKING FOR MINIMUM VALUE AMONG COMPUTES
+if [ $compute1 -lt $compute2 -a $compute1 -lt $compute3 -a $compute1 -lt $compute4 ]
 then
-	min=$a
+	min=$compute1
+elif [ $compute2 -lt $compute3 -a $compute2 -lt $compute4 ]
+then
+	min=$compute2
+elif [ $compute3 -lt $compute4 ]
+then
+	min=$compute3
 else
-	min=$b
+	min=$compute4
 fi
-echo Minimum : $min
-echo Maximum : $max
