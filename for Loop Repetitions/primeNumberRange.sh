@@ -2,10 +2,10 @@
 
 #READ UPPER AND LOWER LIMIT
 read -p "Enter lower limit : " lower
-read -p "Enter Upper Limit : " Upper
+read -p "Enter Upper Limit : " upper
 
 #FOR LOOP FROM LOWER TO UPPER LIMIT
-for (( counter=$lower;counter<=$Upper;counter++ ))
+for (( counter=$lower; counter<=$upper; counter++ ))
 do
 	#INITIALIZE FLAG=0
 	isPrime=1
