@@ -17,7 +17,7 @@ function isPalindrome(){
 	then
 		echo "$1 is Palindrome"
 	else
-	echo "$1 is Not Palindrome "
+		echo "$1 is Not Palindrome "
 	fi
 	}
 

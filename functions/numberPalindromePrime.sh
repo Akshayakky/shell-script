@@ -1,44 +1,44 @@
 #/bin/bash -x
 
-read -p "Enter number : " numbers 
+read -p "Enter number : " number
 
 #FUNCTION TO CHECK IF NUMBER IS PALINDROME
 function isPalindrome(){
-sum=0;
-number=$1
-while [ $number -gt 0 ]
-do
-	remainder=$((number%10));
-	sum=$((sum*10+remainder));
-	number=$((number/10));
-done
+	local sum=0;
+	local number=$1
+	while [ $number -gt 0 ]
+	do
+		remainder=$((number%10));
+		sum=$((sum*10+remainder));
+		number=$((number/10));
+	done
 
-if [ $sum -eq $1 ]
-then
-	echo "Palindrome"
-else
-	echo "Not Palindrome "
-fi
+	if [ $sum -eq $1 ]
+	then
+		echo "$1 is Palindrome"
+	else
+		echo "$1 is not Palindrome "
+	fi
 }
 
 #FUNCTION TO CHECK IF NUMBER IS PRIME
 function isPrime(){
-isPrime=0;
-for (( counter=2;counter<=$1/2;counter++ ))
-do
-	if [ $(($1%$counter)) -eq 0 ]
-	then
-		isPrime=1;
+	local isPrime=0;
+	for (( counter=2; counter<=$1/2; counter++ ))
+	do
+		if [ $(($1%$counter)) -eq 0 ]
+		then
+			isPrime=1;
 		break;
+		fi
+	done
+	if [ $isPrime -eq 0 ]
+	then 
+		echo $1 is Prime
+	else
+		echo $1 is not Prime
 	fi
-done
-if [ $isPrime -eq 0 ]
-then 
-	echo isPrime
-else
-	echo NotPrime
-fi
 }
 
-echo "$( isPrime $numbers )"
-echo "$( isPalindrome $numbers )"
+echo "$( isPrime $number )"
+echo "$( isPalindrome $number )"
