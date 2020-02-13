@@ -2,8 +2,8 @@
 
 #VARIABLES
 numbers=5
-min=$((2**63-1))
-max=$((min*-1))
+min=1000
+max=99
 
 while [ $numbers -gt 0 ]
 do
@@ -17,7 +17,7 @@ do
 	then
 		max=$random
 	fi
-	numbers=`expr $(($numbers-1))`
+	((numbers--))
 done
 
 echo minimum value : $min
