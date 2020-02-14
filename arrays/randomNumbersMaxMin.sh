@@ -3,11 +3,11 @@
 #VARIABLES
 min=1000
 max=99
-sMin=1000
-sMax=99
+secondMin=1000
+secondMax=99
 
 #GET MINIMUM AND MAXIMUM
-for (( counter=1;counter<=10;counter++ ))
+for (( counter=1; counter<=10; counter++ ))
 do
 	array[$counter]=$((100+RANDOM%900))
 	if [ ${array[counter]} -gt $max ]
@@ -24,18 +24,18 @@ done
 echo ${array[@]}
 
 #GET SECOND MAXIMUM AND SECOND MINIMUM
-for (( counter=1;counter<=10;counter++ ))
+for (( counter=1; counter<=10; counter++ ))
 do
-	if [ ${array[counter]} -lt $sMin -a ${array[counter]} -ne $min ]
+	if [ ${array[counter]} -lt $secondMin -a ${array[counter]} -ne $min ]
 	then
-		sMin=${array[counter]}
+		secondMin=${array[counter]}
 	fi
 
-	if [ ${array[counter]} -gt $sMax -a ${array[counter]} -ne $max ]
+	if [ ${array[counter]} -gt $secondMax -a ${array[counter]} -ne $max ]
 	then
-		sMax=${array[counter]}
+		secondMax=${array[counter]}
 	fi
 done
 
-echo Second Minimum : $sMin
-echo Second Maximum : $sMax
+echo Second Minimum : $secondMin
+echo Second Maximum : $secondMax
