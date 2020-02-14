@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 #GENERATE 10 RANDOM NUMBERS AND STORE IN ARRAY
-for (( counter=1;counter<=10;counter++ ))
+for (( counter=1; counter<=10; counter++ ))
 do
 array1[$counter]=$((100+RANDOM%900))
 done
@@ -11,9 +11,9 @@ echo ${array1[@]}
 #SORTING THE ARRAY
 function  sort(){
 array=("$@")
-for (( i=0;i<$((${#array[@]}-1));i++ ))
+for (( i=0; i<$((${#array[@]}-1)); i++ ))
 do
-	for (( j=0;j<$((${#array[@]}-1));j++ ))
+	for (( j=0; j<$((${#array[@]}-1)); j++ ))
 	do
 		if [ ${array[j]} -gt ${array[j+1]} ]
 		then
