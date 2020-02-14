@@ -6,9 +6,9 @@ arrays=(1 -1 0 2 3 -3)
 #FUNCTION TO SORT ARRAY
 function  sort(){
 array=("$@")
-for (( i=0;i<$((${#array[@]}-1));i++ ))
+for (( i=0; i<$((${#array[@]}-1)); i++ ))
 do
-	for (( j=0;j<$((${#array[@]}-1));j++ ))
+	for (( j=0; j<$((${#array[@]}-1)); j++ ))
 	do
 		if [ ${array[j]} -gt ${array[j+1]} ]
 		then
@@ -25,7 +25,7 @@ array=($(sort ${arrays[@]}))
 echo ${array[@]}
 
 #CHECKING FOR INTEGERS THAT SUM UP TO ZERO
-for (( counter=0;counter<${#array[@]};counter++ ))
+for (( counter=0; counter<${#array[@]}; counter++ ))
 do
 	l=$(($counter+1))
 	r=$((${#arrays[@]}-1))
