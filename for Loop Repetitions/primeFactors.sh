@@ -5,7 +5,7 @@ read -p "Enter the number : " number
 flag=0
 
 #FIRST FOR LOOP FOR THE POSSIBLE PRIME FACTORS
-for (( counter=1;$((counter*counter))<=$number;counter++ ))
+for (( counter=1; $((counter*counter))<=$number; counter++ ))
 do
 
 	#TO CHECK IF COUNTER IS A FACTOR
@@ -14,7 +14,7 @@ do
 		isPrime=0
 
 		#SECOND FOR LOOP TO CHECK IF THE FACTOR IS PRIME 
-		for (( i=2;i<=$(($counter/2));i++ ))
+		for (( i=2; i<=$(($counter/2)); i++ ))
 		do
 			if [ $(($counter%$i)) -eq 0 ]
 			then

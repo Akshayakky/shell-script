@@ -9,7 +9,7 @@ for (( counter=$lower; counter<=$upper; counter++ ))
 do
 	#INITIALIZE FLAG=0
 	isPrime=1
-	for (( i=2;i<=$(($counter/2));i++ ))
+	for (( i=2; i<=$(($counter/2)); i++ ))
 	do
 		if [ $(($counter%$i)) -eq 0 ]
 		then
